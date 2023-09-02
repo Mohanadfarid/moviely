@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+#search {
+  padding: 10px;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  border-radius: 30px;
+  width: 200px;
+  margin: 15px;
+  font-size: 16px;
+  color: white;
+}
+#search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+#search::placeholder {
+  font-size: 16px;
+  color: #7378c5;
+}
+
+.movies_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.movie {
+  cursor: pointer;
+  position: relative;
+  color: white;
+  width: 300px;
+  height: 500px;
+  margin: 20px;
+  box-shadow: 0 4px 5px rgb(0 0 0 / 20%);
+  overflow: hidden;
+}
+
+.movie img {
+  width: 100%;
+  height: 80%;
+  margin: 0;
+}
+
+.movie .title_container {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: var(--secondary-color);
+  height: 20%;
+}
+
+.movie .title_container .title {
+  font-size: 20px;
+}
+
+.movie .title_container .rate {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  background-color: var(--primary-color);
+  margin: 5px;
+}
+
+.movie .overView_container {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 400px;
+  z-index: 100;
+  color: black;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  transform: translateY(101%);
+  transition: transform 0.5s ease;
+}
+
+.movie:hover .overView_container {
+  transform: translateY(0%);
+}
+
+.rate.high {
+  color: lightgreen;
+}
+.rate.mid {
+  color: orange;
+}
+.rate.low {
+  color: red;
+}
