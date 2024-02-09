@@ -1,6 +1,8 @@
 # Movie Explorer 🎬
-
 Welcome to Movie Explorer, a web application powered by the TMDB API that allows you to discover and search for your favorite movies easily.
+
+![desktop view](./images/movies%20app%20(1).png)
+_Description: desktop view ._
 
 ## Features
 
